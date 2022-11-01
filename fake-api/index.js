@@ -22,8 +22,8 @@ server.use((req, res, next) => {
 server.post("/auth", (req, res) => {
   console.log(router.db.__wrapped__)
   if (
-    req.body.email === "iam@fakel.lol" &&
-    req.body.password === "apasswordtochange"
+    req.body.email === "iam@fakel.lol" || "mesero@burger.queen" ||"cocinero@burger.queen"||"admin@burger.queen" &&
+    req.body.password === "apasswordtochange" || "112233"
   ) {
     res.jsonp({
       token: secret,

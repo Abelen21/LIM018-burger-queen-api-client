@@ -98,11 +98,7 @@
     }
   ],
   "users": [
-    {
-      "email": "iam@fakel.lol",
-      "password": "apasswordtochange",
-      "id": "hdc2sg4"
-    },
+
     {
       "email": "mesero@burger.queen",
       "password": "112233",
@@ -128,6 +124,14 @@
         "admin": true
       },
       "id": "MzLWo3z"
+    },
+    {
+      "email": "iam@fakel.lol",
+      "password": "apasswordtochange",
+      "roles": {
+        "admin": true
+      },
+      "id": "sK9QW-c"
     }
   ],
   "resp": [

@@ -99,22 +99,35 @@
   ],
   "users": [
     {
-      "id": "",
-      "email": {},
-      "roles": {},
-      "user.roles.admin": ""
-    },
-    {
       "email": "iam@fakel.lol",
       "password": "apasswordtochange",
       "id": "hdc2sg4"
     },
-
     {
-      "name": "Stefani",
-      "email": "iam@fakel.lol",
-      "password": "apasswordtochange",
-      "id": "clKs4e7"
+      "email": "mesero@burger.queen",
+      "password": "112233",
+      "roles": {
+        "admin": false,
+        "waiter": true
+      },
+      "id": "ZfbCjwB"
+    },
+    {
+      "email": "cocinero@burger.queen",
+      "password": "112233",
+      "roles": {
+        "admin": false,
+        "chef": true
+      },
+      "id": "iEqpZbt"
+    },
+    {
+      "email": "admin@burger.queen",
+      "password": "112233",
+      "roles": {
+        "admin": true
+      },
+      "id": "MzLWo3z"
     }
   ],
   "resp": [

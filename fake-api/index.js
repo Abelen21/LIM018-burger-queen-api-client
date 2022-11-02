@@ -20,15 +20,37 @@ server.use((req, res, next) => {
 });
 
 server.post("/auth", (req, res) => {
-  console.log(router.db.__wrapped__)
-  if (
+  if ( 
     req.body.email === "iam@fakel.lol" &&
-    req.body.password === "apasswordtochange"
+    req.body.password === "112233"
   ) {
     res.jsonp({
       token: secret,
     });
-  } else res.status(400).send("Bad Request");
+  } else if (
+    req.body.email === "mesero@burger.queen" && 
+    req.body.password === "112233"
+  ) {
+    res.jsonp({
+      token: secret,
+    });
+  } else if (
+    req.body.email === "cocinero@burger.queen" && 
+    req.body.password === "112233"
+  ){
+    res.jsonp({
+      token: secret,
+    });
+  } else if (
+    req.body.email === "admin@burger.queen" && 
+    req.body.password === "112233"
+  ) {
+    res.jsonp({
+      token: secret,
+    });
+  } else {
+    res.status(400).send("Bad Request")
+  }
 });
 
 server.use(router);

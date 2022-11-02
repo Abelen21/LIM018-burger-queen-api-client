@@ -143,6 +143,14 @@
       font-size: 20px;
       font-weight: bold;
     }
+    .message-error{
+      background: red;
+      color: white;
+      opacity: 0;
+      &.invalid{
+        opacity: 1;
+      }
+    }
  }
 
  /*------------------------------DESKTOP---------------------------*/

@@ -25,6 +25,7 @@ const routes: Routes =[
   },
   {
     path:'ordenes',
+    canActivate:[AuthGuard],
     component:OrdenesComponent
   },
   {

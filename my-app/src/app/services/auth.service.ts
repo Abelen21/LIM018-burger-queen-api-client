@@ -26,7 +26,6 @@ export class AuthService {
   constructor(
     private http: HttpClient,
     private tokenService: TokenService,
-    private router: Router
   ) { }
 
   login(email: string, password: string) {

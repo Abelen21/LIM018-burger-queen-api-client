@@ -14,7 +14,8 @@ export class ProductComponent implements OnInit {
     name: '',
     image:'',
     type:'',
-    dateEntry:''
+    dateEntry:'',
+    qty:0
   };
    @Output() addPRoduct = new EventEmitter<Product>()
 

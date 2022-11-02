@@ -2,48 +2,65 @@
 section{
   padding: 0 15px;
 }
+// .inputName{
+//   min-width: 300px;
+//   max-width: 400px;
+//   .customerName{
+//     font-size: 20px;
+//     font-family: 'Share', cursive;
+//   }
+// }
+.takeOrder{
+  // display: flex;
+  // width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background-color: #01957D;
+  margin: 10px 0;
+  min-width: 300px;
+  max-width: 400px;
+  position: relative;
+  min-height: 300px;
+  max-height: 500px;
+  overflow-y: scroll;
+  .inputName{
+    padding: 2px 0;
+    font-size: 20px;
+    margin: 0;
+    p{
+      margin: 10px;
+    }
+  }
+  .orders{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(184, 217, 138, 1);
+    margin: 5px 4px;
+    border-radius: 5px;
+  }
+  .totalOrder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    .totalPrice{
+      font-size: 40px;
+      margin: 10px;
+    }
+    .cocinaButton{
+      background-color: #EF5F2B;
+      height: 45px;
+      border-radius: 10px;
+    }
+  }
+}
+
 .show-mobile{
   display: block;
   font-family: 'Share', cursive;
-  .takeOrder{
-    // display: flex;
-    // width: 100%;
-    height: auto;
-    border-radius: 10px;
-    background-color: #01957D;
-    margin: 10px 0;
-    .inputName{
-      padding: 2px 0;
-      font-size: 20px;
-      margin: 0;
-      p{
-        margin: 10px;
-      }
-    }
-    .orders{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      background-color: rgba(184, 217, 138, 1);
-      margin: 5px 4px;
-      border-radius: 5px;
-    }
-    .totalOrder{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      .totalPrice{
-        font-size: 40px;
-        margin: 10px;
-      }
-      .cocinaButton{
-        background-color: #EF5F2B;
-        height: 45px;
-        border-radius: 10px;
-      }
-    }
-  }
   .content{
     padding: 1em;
     height: 50%;
@@ -99,7 +116,12 @@ section{
 
 .show-tablet{
   display: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   .content{
+    // overflow-x: scroll;
+    // height: 500px;
     background-color: #dfdfdf;
     padding: 1em;
     height: auto;
@@ -151,6 +173,12 @@ section{
       grid-gap: 15px;
       padding-bottom: 1em;
     }
+  }
+  .takeOrder{
+    max-width: 500px;
+    // background-color: #000000;
+    margin: 3%;
+
   }
   .footer{
     background: rgba(184, 217, 138, 1);
@@ -229,9 +257,6 @@ section{
 @media screen and (min-width: 40em) and (max-width: 63.9em) {
   .show-mobile {
     display: none;
-  }
-  .show-tablet {
-    display: block;
   }
   .show-desktop{
     display: none;

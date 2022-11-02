@@ -28,26 +28,12 @@
 
     <section class="takeOrder">
       <div class="inputName">
-        <p>
-          El nombre del cliente es: <strong>{{ name }}</strong>
+        <p class="customerName">
+          The customer name is: <strong>{{ name }}</strong>
         </p>
         <p>la cantidad de elementos seleccionados {{ myOrder.length }}</p>
       </div>
-      <li class="orders">
-        <p>Aqui iran las ordenes</p>
-        <p>cantidad</p>
-        <p>$ precio</p>
-      </li>
-      <li class="orders">
-        <p>Aqui iran las ordenes</p>
-        <p>cantidad</p>
-        <p>$ precio</p>
-      </li>
-      <li class="orders">
-        <p>Aqui iran las ordenes</p>
-        <p>cantidad</p>
-        <p>$ precio</p>
-      </li>
+
       <li class="orders">
         <p>Aqui iran las ordenes</p>
         <p>cantidad</p>
@@ -59,14 +45,10 @@
         <button class="cocinaButton">Enviar a cocina</button>
       </div>
     </section>
-
-    <div class="footer">
-      <p>Desarrollado por ##### 2022</p>
-    </div>
   </div>
 </section>
 
- <!-- PARA VISTA tablet  -->
+ <!--------------------------------------- PARA VISTA tablet ------------------------------ -->
 
  <div class="show-tablet">
   <main class="content">
@@ -91,22 +73,6 @@
       <p>la cantidad de elementos seleccionados {{ myOrder.length }}</p>
     </div>
     <li class="orders">
-      <p>Aqui iran las ordenes</p>
-      <p>cantidad</p>
-      <p>$ precio</p>
-    </li>
-    <li class="orders">
-      <p>Aqui iran las ordenes</p>
-      <p>cantidad</p>
-      <p>$ precio</p>
-    </li>
-    <li class="orders">
-      <p>Aqui iran las ordenes</p>
-      <p>cantidad</p>
-      <p>$ precio</p>
-    </li>
-    <li class="orders">
-      <p>Aqui iran las ordenes</p>
       <p>cantidad</p>
       <p>$ precio</p>
     </li>
@@ -117,12 +83,12 @@
     </div>
   </section>
 
-  <div class="footer">
-    <p>Desarrollado por ##### 2022</p>
-  </div>
-</div>
 
-<!-- PARA VISTA DESKTOP  -->
+</div>
+<div class="footer">
+  <p>Desarrollado por ##### 2022</p>
+</div>
+<!---------------------------------------------- PARA VISTA DESKTOP  -------------------------------------------------------------->
 
  <div class="show-desktop">
   <main class="content">
@@ -146,31 +112,39 @@
       </p>
       <p>la cantidad de elementos seleccionados {{ myOrder.length }}</p>
     </div>
-    <li class="orders">
-      <p>Aqui iran las ordenes</p>
+    <!-- <li class="orders" *ngFor="let product of myOrder">
+      <p>{{product.name}}</p>
       <p>cantidad</p>
-      <p>$ precio</p>
-    </li>
-    <li class="orders">
-      <p>Aqui iran las ordenes</p>
-      <p>cantidad</p>
-      <p>$ precio</p>
-    </li>
-    <li class="orders">
-      <p>Aqui iran las ordenes</p>
-      <p>cantidad</p>
-      <p>$ precio</p>
-    </li>
-    <li class="orders">
-      <p>Aqui iran las ordenes</p>
-      <p>cantidad</p>
-      <p>$ precio</p>
-    </li>
+      <p>{{product.price}}</p>
+    </li> -->
 
     <div class="totalOrder">
       <strong class="totalPrice">total: ${{ total }}</strong>
       <button class="cocinaButton">Enviar a cocina</button>
     </div>
+
+    <table class="totalOrderFinal">
+      <thead>
+        <tr>
+          <th>Detalle</th>
+            <th>Cant</th>
+            <th>price</th>
+        </tr>
+      </thead>
+      <tbody class="orders" *ngFor="let myOrderReceived of myOrder">
+        <tr>
+          <th>{{myOrderReceived.name}}</th>
+          <th>{{myOrderReceived.id}}</th>
+          <th>{{myOrderReceived.price}}</th>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>total: ${{ total }}</th>
+          <button class="cocinaButton">Enviar a cocina</button>
+        </tr>
+      </tfoot>
+    </table>
   </section>
 
   <div class="footer">

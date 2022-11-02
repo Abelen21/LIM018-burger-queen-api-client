@@ -19,6 +19,7 @@ import { tap } from 'rxjs/operators'
 })
 export class AuthService {
 
+  //private apiUrl = `https://bqapi.fakel.lol`
   private apiUrl = `http://localhost:3000`;
 
   constructor(

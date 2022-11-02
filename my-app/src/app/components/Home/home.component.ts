@@ -9,29 +9,22 @@ import { ProductsService } from '../../services/products.service';
   styleUrls: ['./home.component.scss'],
 })
 
-// export class homeComponent{
-//   name : "Stefani";
-// }
 export class homeComponent implements OnInit {
-  name = 'Stefani';
-  myOrder: Product[] = []; // se pone privado para proteger la accecibilidad
-  total = 0;
+  name:string = 'Stefani';
+  myOrder: any[] = []; // se pone privado para proteger la accecibilidad
+  // qty: number = 0;
+  total:number = 0;
   products: Product[] = [];
   filteredProducts: Product[] = [];
   token: String = '';
-
   // para mostrar y ocultar con el boton
   show = {
     showBreakfast: false,
     showLunch:  false
   };
-
-
-
   constructor(private productsService: ProductsService) {
     this.myOrder = this.productsService.getmyOrder();
   }
-
   //para manejar peticiones asincronas
   ngOnInit(): void {
     // this.productsService.getAllProducts().subscribe((data) => {
@@ -39,7 +32,6 @@ export class homeComponent implements OnInit {
     //   this.products = data;
     // });
   }
-
   // para filtrar por type breakfast
   viewBreakfast = () => {
     if (this.show.showBreakfast) {
@@ -74,7 +66,16 @@ export class homeComponent implements OnInit {
   //para agregar los productos y contabilizarlos y calcular el totoal del precio
   onAddToOrder(product: Product) {
     this.productsService.addProduct(product);
-    this.total = this.productsService.getTotal();
+    console.log(this.myOrder)
+    // if(this.myOrder.some((e)=>e.name===product.name)){
+
+    //   console.log(product.name)
+    // }
+    // this.myOrder.push(this.qty)
+
+
+    // this.total = this.productsService.getTotal();
+  //   console.log(this.myOrder)
   }
   // para poder cambiar el nombreee
   changeName(event: Event) {

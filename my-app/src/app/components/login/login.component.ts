@@ -23,9 +23,11 @@ export class LoginComponent {
     .subscribe(rta => {
       console.log(rta.token);
       this.router.navigate(['/home'])
+      //{ queryParams: { data: this.email } } -- puedre usarse para pasar parametro de consulta,
     });
   }
 }
+
 // import { Component} from '@angular/core';
 // import { AuthService } from '../../services/auth.service';
 // import { Router } from '@angular/router';

@@ -8,7 +8,7 @@ import { UsersService } from './services/users.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-app';
+  // title = 'my-app';
   token = '';
 
   constructor(

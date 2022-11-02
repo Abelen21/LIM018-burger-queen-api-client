@@ -20,6 +20,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
+  //private apiUrl = `https://bqapi.fakel.lol`
   private apiUrl = `http://localhost:3000`;
 
   constructor(

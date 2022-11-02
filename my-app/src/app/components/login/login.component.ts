@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   token = ''
-  email = 'iam@fakel.lol'
-  password = 'apasswordtochange'
-
+  email = ''
+  password = ''
+  statusDetail : 'usuario o contraseña errada' | 'ingrese usuario y contraseña para entrar al sistema' | '' = ''
 // tenemos que injectar en el contructor el servicio router
   constructor(
     private authService: AuthService,
@@ -19,11 +19,18 @@ export class LoginComponent {
   ) { }
 
   login() {
-    this.authService.login(this.email, this.password)
-    .subscribe(resp => {
-      console.log(resp)
-      this.router.navigate(['/pedidos'])
-    });
-  }
+    if(this.email !== '' && this.password !== ''){
+      this.authService.login(this.email, this.password)
+      .subscribe(resp => {
+        console.log(resp)
+        this.router.navigate(['/pedidos'])
+      },response =>{
+        console.error(response);
+        this.statusDetail = 'usuario o contraseña errada'})
+      }else{
+        this.statusDetail = 'ingrese usuario y contraseña para entrar al sistema'
+      }
+    }
 }
+
 

@@ -30,7 +30,9 @@
   <div class="imgContainer">
     <img class="logoKrusty" src="../assets/imagenes/krostys-logo.png" alt="logoKrusty">
   </div>
-
+  <div class="message-error" [class.invalid]= "statusDetail == 'ingrese usuario y contraseña para entrar al sistema'||'ingrese usuario y contraseña para entrar al sistema'" >
+    {{statusDetail}}
+  </div>
   <form class="form card">
     <div class="card_header">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">

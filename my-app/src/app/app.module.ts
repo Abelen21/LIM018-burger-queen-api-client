@@ -20,6 +20,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { IngresoComponent } from './pages/ingreso/ingreso.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { OrdenesComponent } from './pages/ordenes/ordenes.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 // const appRoutes:Routes =[
@@ -40,7 +41,8 @@ import { OrdenesComponent } from './pages/ordenes/ordenes.component';
     NotFoundComponent,
     IngresoComponent,
     PedidosComponent,
-    OrdenesComponent
+    OrdenesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

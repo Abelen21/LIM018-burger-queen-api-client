@@ -11,7 +11,7 @@ export class LoginComponent {
   token = ''
   email = ''
   password = ''
-  statusDetail : 'usuario o contraseña errada' | 'ingrese usuario y contraseña para entrar al sistema' | '' = ''
+  statusDetail = ''
 // tenemos que injectar en el contructor el servicio router
   constructor(
     private authService: AuthService,
@@ -28,7 +28,7 @@ export class LoginComponent {
         console.error(response);
         this.statusDetail = 'usuario o contraseña errada'})
       }else{
-        this.statusDetail = 'ingrese usuario y contraseña para entrar al sistema'
+        this.statusDetail = 'Ingrese usuario y contraseña para entrar al sistema'
       }
     }
 }

@@ -98,13 +98,13 @@
     }
   ],
   "users": [
-
     {
       "email": "mesero@burger.queen",
       "password": "112233",
       "roles": {
         "admin": false,
-        "waiter": true
+        "waiter": true,
+        "chef": false
       },
       "id": "ZfbCjwB"
     },
@@ -113,6 +113,7 @@
       "password": "112233",
       "roles": {
         "admin": false,
+        "waiter": false,
         "chef": true
       },
       "id": "iEqpZbt"
@@ -121,7 +122,9 @@
       "email": "admin@burger.queen",
       "password": "112233",
       "roles": {
-        "admin": true
+        "admin": true,
+        "waiter": false,
+        "chef": false
       },
       "id": "MzLWo3z"
     },
@@ -129,9 +132,21 @@
       "email": "iam@fakel.lol",
       "password": "apasswordtochange",
       "roles": {
-        "admin": true
+        "admin": true,
+        "waiter": false,
+        "chef": false
       },
       "id": "sK9QW-c"
+    },
+    {
+      "email": "mesero2@burger.queen",
+      "password": "112233",
+      "roles": {
+        "admin": false,
+        "waiter": true,
+        "chef": false
+      },
+      "id": "zykCfc5"
     }
   ],
   "resp": [

@@ -3,7 +3,7 @@ const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
-const secret = "EsUnSecreto2";
+const secret = "EsUnSecreto";
 
 server.use(jsonServer.bodyParser);
 server.use(middlewares);
@@ -45,6 +45,13 @@ server.post("/auth", (req, res) => {
     req.body.email === "admin@burger.queen" && 
     req.body.password === "112233"
   ) {
+    res.jsonp({
+      token: secret,
+    });
+  } else if(
+    req.body.email === "mesero2@burger.queen" && 
+    req.body.password === "112233"
+  ){
     res.jsonp({
       token: secret,
     });

@@ -21,6 +21,8 @@ import { IngresoComponent } from './pages/ingreso/ingreso.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { OrdenesComponent } from './pages/ordenes/ordenes.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { OrderComponent } from './components/order/order.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 
 // const appRoutes:Routes =[
@@ -42,7 +44,9 @@ import { FooterComponent } from './components/footer/footer.component';
     IngresoComponent,
     PedidosComponent,
     OrdenesComponent,
-    FooterComponent
+    FooterComponent,
+    OrderComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,

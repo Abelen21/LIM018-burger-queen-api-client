@@ -1,0 +1,13 @@
+<div class="content">
+  <div class = "content2">
+    <div class="estados--options">
+      <button class="buttonEstados" (click)="viewPendientes()">PENDIENTES</button>
+      <button class="buttonEstados" (click)="viewListos()">LISTOS</button>
+    </div>
+    <div class="orders--grid">
+      <app-order [order]="order" *ngFor="let order of orders2"></app-order>
+    </div>
+  </div>
+</div>
+
+

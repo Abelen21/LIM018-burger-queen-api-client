@@ -48,9 +48,9 @@ export class LoginComponent {
         })
       },response =>{
         console.error(response);
-        this.statusDetail = 'usuario o contraseña errada'})
+        this.statusDetail = 'USUARIO O CONTRASEÑA ERRADA '})
       }else{
-        this.statusDetail = 'Ingrese usuario y contraseña para entrar al sistema'
+        this.statusDetail = 'INGRESE USUARIO Y CONTRASEÑA PARA ENTRAR AL SISTEMA'
       }
     }
 }

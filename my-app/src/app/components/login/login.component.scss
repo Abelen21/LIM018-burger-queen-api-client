@@ -4,8 +4,8 @@
 //   margin: 0;
 // }
 .container{
-  height: 800px;
-  background-color: #01957D;
+  height: 860px;
+  background-color: rgba(1, 149, 125, 1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,16 +24,19 @@
   align-items: center;
 }
 .message-error{
+  font-family: 'Share', cursive;
+  font-size: 18px;
   width: 295px;
-  background: #eb0d26;
-  color: white;
+  // background-color: yellow;
+  // background: rgba(206, 158, 39, 1);
+  color: red;
   text-align: center;
 }
 .card {
   width: 55%;
   min-width: 250px;
   height: 70%;
-  background: #FFC100;
+  background: rgba(204, 148, 173, 1);
   border: 2px solid white;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -89,7 +92,7 @@
   font-weight: bold;
  }
   button {
-  background-color: #EB0D26;
+  background-color: rgba(255, 193, 0, 1);
   margin-top: 10px;
   font-size: 14px;
   padding: 7px 12px;
@@ -97,7 +100,7 @@
   color: white;
  }
  button:hover {
-  background-color: #EF5F2B;
+  background-color: red;
  }
 
 /* TABLET */
@@ -126,7 +129,7 @@
     padding-bottom: 20px;
   }
   button {
-    background-color: #EB0D26;
+    background-color: rgba(255, 193, 0, 1);
     margin-top: 20px;
     font-size: 14px;
     padding: 10px 15px;

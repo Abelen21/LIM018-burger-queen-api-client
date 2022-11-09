@@ -1,5 +1,5 @@
 import { Component, OnInit,Input , Output, EventEmitter} from '@angular/core';
-import {Product} from '../../models/products.model';
+import {Product} from '../../../models/products.model';
 
 @Component({
   selector: 'app-product',

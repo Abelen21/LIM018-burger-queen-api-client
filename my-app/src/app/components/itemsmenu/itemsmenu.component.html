@@ -1,0 +1,7 @@
+<div  class="menu--grid">
+  <app-product
+    [product]="product"
+    *ngFor="let product of ProductsList"
+    (addPRoduct)="onAddToOrder($event)"
+    ></app-product>
+</div>

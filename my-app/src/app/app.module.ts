@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { homeComponent } from './components/Home/home.component';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
-import { ProductComponent } from './components/product/product.component';
+import { ProductComponent } from './components/itemsmenu/product/product.component';
 import { ContadorComponent } from './components/contador/contador.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
 import { LoginComponent } from './components/login/login.component';
@@ -20,9 +20,13 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { IngresoComponent } from './pages/ingreso/ingreso.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { OrdenesComponent } from './pages/ordenes/ordenes.component';
+<<<<<<< HEAD
+import { ItemsmenuComponent } from './components/itemsmenu/itemsmenu.component';
+=======
 import { FooterComponent } from './components/footer/footer.component';
 import { OrderComponent } from './components/order/order.component';
 import { OrdersComponent } from './components/orders/orders.component';
+>>>>>>> 7eed801fdc522d44fc79641a6df5f94230f9d7d6
 
 
 // const appRoutes:Routes =[
@@ -44,9 +48,13 @@ import { OrdersComponent } from './components/orders/orders.component';
     IngresoComponent,
     PedidosComponent,
     OrdenesComponent,
+<<<<<<< HEAD
+    ItemsmenuComponent
+=======
     FooterComponent,
     OrderComponent,
     OrdersComponent
+>>>>>>> 7eed801fdc522d44fc79641a6df5f94230f9d7d6
   ],
   imports: [
     BrowserModule,

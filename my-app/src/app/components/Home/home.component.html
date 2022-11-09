@@ -11,118 +11,7 @@
     />
   </p>
 
-  <div class="show-mobile">
-    <main class="content">
-      <div class="menu--options">
-        <button class="buttonBreakfast" (click)="viewBreakfast()">Desayuno</button>
-        <button class="buttonBreakfast" (click)="viewLunch()">Almuerzo</button>
-      </div>
-      <div *ngIf="show"   class="menu--grid">
-        <app-product
-          [product]="product"
-          *ngFor="let product of products"
-          (addPRoduct)="onAddToOrder($event)"
-        ></app-product>
-      </div>
-    </main>
 
-    <section class="takeOrder">
-      <div class="inputName">
-        <p class="customerName">
-          The customer name is: <strong>{{ name }}</strong>
-        </p>
-        <p>la cantidad de elementos seleccionados {{ myOrder.length }}</p>
-      </div>
-
-      <table class="totalOrderFinal">
-        <thead>
-          <tr>
-            <th>Detalle</th>
-              <th>Cant</th>
-              <th>price</th>
-          </tr>
-        </thead>
-        <tbody class="orders" *ngFor="let myOrderReceived of myOrder">
-          <tr>
-            <th>{{myOrderReceived.name}}</th>
-            <th>{{myOrderReceived.id}}</th>
-            <th>{{myOrderReceived.price}}</th>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <th>total: ${{ total }}</th>
-            <button class="cocinaButton">Enviar a cocina</button>
-          </tr>
-        </tfoot>
-      </table>
-
-      <div class="totalOrder">
-        <strong class="totalPrice">total: ${{ total }}</strong>
-        <button class="cocinaButton">Enviar a cocina</button>
-      </div>
-    </section>
-  </div>
-</section>
-
- <!--------------------------------------- PARA VISTA tablet ------------------------------ -->
-
- <div class="show-tablet">
-  <main class="content">
-    <div class="menu--options">
-      <button class="buttonBreakfast" (click)="viewBreakfast()"><strong>BREAKFAST</strong></button>
-      <button class="buttonBreakfast" (click)="viewLunch()"><strong>LUNCH</strong></button>
-    </div>
-    <div *ngIf="show"   class="menu--grid">
-      <app-product
-        [product]="product"
-        *ngFor="let product of products"
-        (addPRoduct)="onAddToOrder($event)"
-      ></app-product>
-    </div>
-  </main>
-
-  <section class="takeOrder">
-    <div class="inputName">
-      <p>
-        El nombre del cliente es: <strong>{{ name }}</strong>
-      </p>
-      <p>la cantidad de elementos seleccionados {{ myOrder.length }}</p>
-    </div>
-    <table class="totalOrderFinal">
-      <thead>
-        <tr>
-          <th>Detalle</th>
-            <th>Cant</th>
-            <th>price</th>
-        </tr>
-      </thead>
-      <tbody class="orders" *ngFor="let myOrderReceived of myOrder">
-        <tr>
-          <th>{{myOrderReceived.name}}</th>
-          <th>{{myOrderReceived.id}}</th>
-          <th>{{myOrderReceived.price}}</th>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th>total: ${{ total }}</th>
-          <button class="cocinaButton">Enviar a cocina</button>
-        </tr>
-      </tfoot>
-    </table>
-
-    <div class="totalOrder">
-      <strong class="totalPrice">total: ${{ total }}</strong>
-      <button class="cocinaButton">Enviar a cocina</button>
-    </div>
-  </section>
-
-
-</div>
-<div class="footer">
-  <p>Desarrollado por ##### 2022</p>
-</div>
 <!---------------------------------------------- PARA VISTA DESKTOP  -------------------------------------------------------------->
 
  <div class="show-desktop">
@@ -131,13 +20,7 @@
       <button class="buttonBreakfast" (click)="viewBreakfast()"><strong>BREAKFAST</strong></button>
       <button class="buttonBreakfast" (click)="viewLunch()"><strong>LUNCH</strong></button>
     </div>
-    <div *ngIf="show"   class="menu--grid">
-      <app-product
-        [product]="product"
-        *ngFor="let product of products"
-        (addPRoduct)="onAddToOrder($event)"
-      ></app-product>
-    </div>
+    <app-itemsmenu *ngIf="show" [ProductsList]="products"></app-itemsmenu>
   </main>
 
   <section class="takeOrder">
@@ -215,7 +98,78 @@
 
 
 
+<!-- <div class="show-mobile">
+  <main class="content">
+    <div class="menu--options">
+      <button class="buttonBreakfast" (click)="viewBreakfast()">Desayuno</button>
+      <button class="buttonBreakfast" (click)="viewLunch()">Almuerzo</button>
+    </div>
+    <div *ngIf="show"   class="menu--grid">
+      <app-product
+        [product]="product"
+        *ngFor="let product of products"
+        (addPRoduct)="onAddToOrder($event)"
+      ></app-product>
+    </div>
+    <app-itemsmenu></app-itemsmenu>
+  </main>
 
+  <section class="takeOrder">
+    <div class="inputName">
+      <p class="customerName">
+        The customer name is: <strong>{{ name }}</strong>
+      </p>
+      <p>la cantidad de elementos seleccionados {{ myOrder.length }}</p>
+    </div>
+
+    <li class="orders">
+      <p>Aqui iran las ordenes</p>
+      <p>cantidad</p>
+      <p>$ precio</p>
+    </li>
+
+    <div class="totalOrder">
+      <strong class="totalPrice">total: ${{ total }}</strong>
+      <button class="cocinaButton">Enviar a cocina</button>
+    </div>
+  </section>
+</div>
+</section> -->
+
+<!--------------------------------------- PARA VISTA tablet ------------------------------ -->
+
+<!-- <div class="show-tablet">
+<main class="content">
+  <div class="menu--options">
+    <button class="buttonBreakfast" (click)="viewBreakfast()"><strong>BREAKFAST</strong></button>
+    <button class="buttonBreakfast" (click)="viewLunch()"><strong>LUNCH</strong></button>
+  </div>
+<app-itemsmenu></app-itemsmenu>
+</main>
+
+<section class="takeOrder">
+  <div class="inputName">
+    <p>
+      El nombre del cliente es: <strong>{{ name }}</strong>
+    </p>
+    <p>la cantidad de elementos seleccionados {{ myOrder.length }}</p>
+  </div>
+  <li class="orders">
+    <p>cantidad</p>
+    <p>$ precio</p>
+  </li>
+
+  <div class="totalOrder">
+    <strong class="totalPrice">total: ${{ total }}</strong>
+    <button class="cocinaButton">Enviar a cocina</button>
+  </div>
+</section>
+
+
+</div>
+<div class="footer">
+<p>Desarrollado por ##### 2022</p>
+</div> -->
 
 
 

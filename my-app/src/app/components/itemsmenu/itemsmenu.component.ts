@@ -10,33 +10,38 @@ import { ProductsService } from '../../services/products.service';
 })
 export class ItemsmenuComponent implements OnInit {
   @Input() ProductsList: Product[] = []
+  
   // itemsProduct: Product[] = [];
   // myOrder : Product[] = [];
-  //myOrder: { items:[], total:0};
+  myOrder: Product[] = []
+  total: number = 0
   // para mostrar y ocultar con el boton
 
   constructor(private productsService: ProductsService) {
-    this.ProductsList = this.productsService.getmyOrder();
-    console.log(this.ProductsList)
+    // this.myOrder= { items:[], total:0};
+    //this.productsService.getmyOrder();
+    // console.log(this.ProductsList)
   }
   ngOnInit(): void {
   }
-  // onAddToOrder(rpoduct: Product) {
-  //   const item = this.myOrder.items.find(i => i.id === product.id)
-  //   if(!item){
-  //     this.myOrder.items.push({id: itemsProduct.id, name:itemsProduct.name, qty:1, unitPrice: itemsProduct.price})
-  //   } else {
-  //     item.qty = item.qty + 1
-  //   }
-
-  //   this.myOrder.total = this.myOrder.items.reduce((total,item)=>{
-  //     total = total + (item.qty * item.unitPrice)
-
-  //     return total
-  //   },0)
-    // }
   onAddToOrder(product: Product) {
-    this.productsService.addProduct(product);
-    // this.total = this.productsService.getTotal();
+
+    const item = this.myOrder.find(i => i.id === product.id)
+    if(!item){
+      this.myOrder.push({id: product.id, name:product.name, qty:1, price: product.price})
+    } else {
+      item.qty = item.qty + 1
+    }
+    console.log(this.myOrder)
+    this.total = this.myOrder.reduce((total,item)=>{
+      total = total + (item.qty * item.price)
+      return total
+    },0)
+    console.log(this.total)
   }
+
+  // onAddToOrder(product: Product) {
+  //   this.productsService.addProduct(product);
+  //   // this.total = this.productsService.getTotal();
+  // }
   }

@@ -18,9 +18,9 @@ export class ProductsService {
     return this.myorder;
   }
   // sumando el total de price
-  getTotal() {
-    return this.myorder.reduce((sum, item) => sum + item.price, 0);
-  }
+  // getTotal() {
+  //   return this.myorder.reduce((sum, item) => sum + item.price, 0);
+  // }
   //conección con la API
   // getAllProducts(token:string){
   //   return this.http.get<Product[]>('http://localhost:3000/products',{

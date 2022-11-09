@@ -156,36 +156,104 @@
   ],
   "orders": [
     {
-      "id": "",
-      "userId": "",
-      "client": "",
+      "id": "1",
+      "userId": "mesero15",
+      "client": "cliente15",
       "products": [
         {
-          "qty": 1,
-          "product": {
-            "id": "",
-            "name": "",
-            "image": "https://giphy.com/embed/V5hODlkcyo9ARK28mj/video"
-          }
+          "productId": "1",
+          "qty": 5
+        },
+        {
+          "productId": "2",
+          "qty": 5
         }
       ],
-      "status": "",
-      "order.dateEntry": "",
-      "order.dateProcessed": ""
+      "status": "listo",
+      "dateEntry": "2018/01/30 23:30:14",
+      "dateProcessed": "2018/01/30 23:35:14"
     },
     {
-      "id": "",
-      "userId": "",
-      "client": "",
+      "id": "2",
+      "userId": "mesero1",
+      "client": "cliente2",
       "products": [
         {
-          "qty": 1,
-          "product": {}
+          "productId": "1",
+          "qty": 5
         }
       ],
-      "order.status": "",
-      "order.dateEntry": "",
-      "order.dateProcessed": ""
+      "status": "pendiente",
+      "dateEntry": "2018/01/30 23:30:14",
+      "dateProcessed": "2018/01/30 23:35:14"
+    },
+    {
+      "id": "2",
+      "userId": "mesero1",
+      "client": "cliente3",
+      "products": [
+        {
+          "productId": "1",
+          "qty": 5
+        }
+      ],
+      "status": "listo",
+      "dateEntry": "2018/01/30 23:30:14",
+      "dateProcessed": "2018/01/30 23:35:14"
+    },
+    {
+      "userId": "mesero2@burger.queen",
+      "client": "cliente4",
+      "products": [
+        {
+          "productId": "1",
+          "qty": "5"
+        },
+        {
+          "productId": "2",
+          "qty": "3"
+        }
+      ],
+      "status": "pendiente",
+      "dateEntry": "2018/01/30 23:30:14",
+      "dateProcessed": "",
+      "id": "KS5hxCH"
+    },
+    {
+      "userId": "mesero2@burger.queen",
+      "client": "cliente5",
+      "products": [
+        {
+          "productId": "1",
+          "qty": "5"
+        },
+        {
+          "productId": "2",
+          "qty": "3"
+        }
+      ],
+      "status": "pendiente",
+      "dateEntry": "2018/01/30 23:30:14",
+      "dateProcessed": "",
+      "id": "MpQkWS6"
+    },
+    {
+      "userId": "mesero12@burger.queen",
+      "client": "cliente12",
+      "products": [
+        {
+          "productId": "1",
+          "qty": "5"
+        },
+        {
+          "productId": "2",
+          "qty": "3"
+        }
+      ],
+      "status": "listo",
+      "dateEntry": "2018/01/30 23:30:14",
+      "dateProcessed": "",
+      "id": "ob9SKG8"
     }
   ]
 }

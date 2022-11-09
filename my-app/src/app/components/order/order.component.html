@@ -1,0 +1,28 @@
+<div class="order">
+
+<div class="client">
+  <p>Pedido de {{order.client}}</p>
+</div>
+
+<div class="container">
+  <div class="cant">
+    <p>Cantidad</p>
+    <p *ngFor="let order of order.products">{{order.qty}}</p>
+  </div>
+  <div class="det">
+    <p>Detalle </p>
+    <p *ngFor="let order of order.products">{{order.productId}}</p>
+    <p>{{order.status}} </p>
+  </div>
+</div>
+
+<div *ngIf = "order.status === 'pendiente'" class="order-button">
+  <button  class="changeStatusButton">Servir</button>
+</div>
+
+</div>
+
+<!-- <p>{{order.products.length}}</p> -->
+
+<!-- <p [i]="order" *ngFor="let i of order.products.length"></p>
+<app-order [order]="order" *ngFor="let order of orders"></app-order> -->

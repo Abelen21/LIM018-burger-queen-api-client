@@ -3,7 +3,7 @@ const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
-const secret = "EsUnSecreto2";
+const secret = "EsUnSecreto";
 
 server.use(jsonServer.bodyParser);
 server.use(middlewares);
@@ -20,38 +20,53 @@ server.use((req, res, next) => {
 });
 
 server.post("/auth", (req, res) => {
-  if ( 
-    req.body.email === "iam@fakel.lol" &&
+  if (req.body.email === "iam@fakel.lol" && req.body.password === "112233") {
+    res.jsonp({
+      token: secret,
+    });
+  } else if (
+    req.body.email === "mesero@burger.queen" &&
     req.body.password === "112233"
   ) {
     res.jsonp({
       token: secret,
     });
   } else if (
-    req.body.email === "mesero@burger.queen" && 
+    req.body.email === "cocinero@burger.queen" &&
     req.body.password === "112233"
   ) {
     res.jsonp({
       token: secret,
     });
   } else if (
-    req.body.email === "cocinero@burger.queen" && 
+    req.body.email === "admin@burger.queen" &&
     req.body.password === "112233"
-  ){
+  ) {
     res.jsonp({
       token: secret,
     });
   } else if (
-    req.body.email === "admin@burger.queen" && 
+    req.body.email === "mesero2@burger.queen" &&
     req.body.password === "112233"
   ) {
     res.jsonp({
       token: secret,
     });
   } else {
-    res.status(400).send("Bad Request")
+    res.status(400).send("Bad Request");
   }
 });
+
+// server.post("/orders", (req, res) => {
+  
+//   res.jsonp({
+//     order:{...req.body,
+//     status:'pendiente',
+//     dateEntry : new Date().toLocaleTimeString(),
+//   }   
+//   });
+
+// });
 
 server.use(router);
 server.listen(3000, () => {

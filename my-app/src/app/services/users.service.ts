@@ -10,8 +10,6 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-import { environment } from './../../environments/environment';
 import { User, CreateUserDTO } from './../models/user.model';
 
 @Injectable({
@@ -20,6 +18,7 @@ import { User, CreateUserDTO } from './../models/user.model';
 export class UsersService {
 
   private apiUrl = `http://localhost:3000/users`;
+  private id = ''
 
   constructor(
     private http: HttpClient
@@ -33,7 +32,19 @@ export class UsersService {
     });
   }
 
-  getAll() {
-    return this.http.get<User[]>(this.apiUrl);
+  getAll(token:string) {
+    return this.http.get<User[]>(this.apiUrl,{
+      headers:{
+        Authorization : `Bearer ${token}`,
+      }
+   });
+  }
+
+  getRoles(token:string, id:string) {
+    return this.http.get<User>(`${this.apiUrl}/${id}`,{
+      headers:{
+        Authorization : `Bearer ${token}`,
+      }
+   });
   }
 }

@@ -34,11 +34,28 @@
         <p>la cantidad de elementos seleccionados {{ myOrder.length }}</p>
       </div>
 
-      <li class="orders">
-        <p>Aqui iran las ordenes</p>
-        <p>cantidad</p>
-        <p>$ precio</p>
-      </li>
+      <table class="totalOrderFinal">
+        <thead>
+          <tr>
+            <th>Detalle</th>
+              <th>Cant</th>
+              <th>price</th>
+          </tr>
+        </thead>
+        <tbody class="orders" *ngFor="let myOrderReceived of myOrder">
+          <tr>
+            <th>{{myOrderReceived.name}}</th>
+            <th>{{myOrderReceived.id}}</th>
+            <th>{{myOrderReceived.price}}</th>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>total: ${{ total }}</th>
+            <button class="cocinaButton">Enviar a cocina</button>
+          </tr>
+        </tfoot>
+      </table>
 
       <div class="totalOrder">
         <strong class="totalPrice">total: ${{ total }}</strong>
@@ -72,10 +89,28 @@
       </p>
       <p>la cantidad de elementos seleccionados {{ myOrder.length }}</p>
     </div>
-    <li class="orders">
-      <p>cantidad</p>
-      <p>$ precio</p>
-    </li>
+    <table class="totalOrderFinal">
+      <thead>
+        <tr>
+          <th>Detalle</th>
+            <th>Cant</th>
+            <th>price</th>
+        </tr>
+      </thead>
+      <tbody class="orders" *ngFor="let myOrderReceived of myOrder">
+        <tr>
+          <th>{{myOrderReceived.name}}</th>
+          <th>{{myOrderReceived.id}}</th>
+          <th>{{myOrderReceived.price}}</th>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>total: ${{ total }}</th>
+          <button class="cocinaButton">Enviar a cocina</button>
+        </tr>
+      </tfoot>
+    </table>
 
     <div class="totalOrder">
       <strong class="totalPrice">total: ${{ total }}</strong>

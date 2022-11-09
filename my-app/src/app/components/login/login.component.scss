@@ -1,13 +1,11 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-/*------------------------------MOVIL---------------------------*/
-.show-mobile{
-  width: 100%;
-  height: 900px;
-  background-color: #01957D;
+// * {
+//   box-sizing: border-box;
+//   padding: 0;
+//   margin: 0;
+// }
+.container{
+  height: 860px;
+  background-color: rgba(1, 149, 125, 1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,46 +13,54 @@
 }
 .imgContainer{
   width: 80%;
-  height: auto;
   justify-content: center;
-  // border-bottom: 5px solid #73beb2;
- }
- .logoKrusty{
-   width: 90%;
-   margin-bottom: 8%;
- }
-/* From uiverse.io by @alexmaracinaru */
+}
+.logoKrusty{
+  width: 90%;
+  margin-bottom: 8%;
+}
+.container2{
+  justify-content: center;
+  align-items: center;
+}
+.message-error{
+  font-family: 'Share', cursive;
+  font-size: 18px;
+  width: 295px;
+  // background-color: yellow;
+  // background: rgba(206, 158, 39, 1);
+  color: red;
+  text-align: center;
+}
 .card {
   width: 55%;
   min-width: 250px;
-  height: 30%;
-  background: #FFC100;
+  height: 70%;
+  background: rgba(204, 148, 173, 1);
   border: 2px solid white;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
- }
- .form {
+}
+.form {
   padding: 20px;
- }
- .card_header {
+}
+.card_header {
   display: flex;
   align-items: center;
   height: 50px;
- }
- -----------------------------
- .card svg {
+}
+.card svg {
   color: #ffffff;
   margin-bottom: 20px;
   margin-right: 5px;
   border: 2px solid #ffffff;
- }
- .form_heading {
+}
+.form_heading {
   padding-bottom: 20px;
   font-size: 21px;
   color: #ffffff;
   font-weight: bold;
- }
-
+}
  .field {
   padding-bottom: 10px;
  }
@@ -71,15 +77,12 @@
   border: 1px solid #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
  }
-
  .input:focus-visible {
   outline: 1px solid #01957D;
  }
-
  .input::placeholder {
   color: #3a3a3f;
  }
-
  label {
   color: #B2BAC8;
   font-size: 16px;
@@ -88,148 +91,155 @@
   color: #ffffff;
   font-weight: bold;
  }
-
- button {
-  background-color: #EB0D26;
+  button {
+  background-color: rgba(255, 193, 0, 1);
   margin-top: 10px;
   font-size: 14px;
   padding: 7px 12px;
   font-weight: 500;
   color: white;
  }
-
  button:hover {
-  background-color: #EF5F2B;
+  background-color: red;
  }
 
- /*------------------------------TABLET---------------------------*/
- .show-tablet{
-  display: flex;
-  flex-direction: row;
-  background-color: #01957D;
-  height: 1024px;
-    .imgContainer{
-      justify-content: center;
-      margin-top: 8%;
-    }
-    .card{
-      width: 60%;
-      margin: 6%;
-      margin-left: 18%;
-
-    }
-    .logoKrusty{
-      margin-left: 20%;
-    }
-    .form_heading{
-      font-size: 40px;
-      font-weight: bold;
-    }
-    label{
-      font-size: 30px;
-    }
-    .input {
-      height: 40px;
-      margin: 3% 0;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .card {
-      height: 35%;
-    }
-    .button{
-      width: 100px;
-      height: 40px;
-      font-size: 20px;
-      font-weight: bold;
-    }
-    .message-error{
-      background: red;
-      color: white;
-      opacity: 0;
-      &.invalid{
-        opacity: 1;
-      }
-    }
- }
-
- /*------------------------------DESKTOP---------------------------*/
- .show-desktop{
-  display: flex;
-  padding: 0;
-  width: 100%;
-
-  margin: 0;
-  background-color: #01957D;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  margin-top: 2%;
-    .imgContainer{
-      display: flex;
-      align-items: center;
-      width: 40%;
-      margin-top: 10%;
-      margin-left: 0;
-
-    }
-    .form{
-      min-width: 350px;
-      max-width: 450px;
-      margin-left: 25%;
-    }
-    .form_heading{
-      font-size: 40px;
-      font-weight: bold;
-    }
-    label{
-      font-size: 30px;
-    }
-    .input {
-      height: 40px;
-      margin: 3% 0;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .button{
-      width: 100px;
-      height: 40px;
-      font-size: 20px;
-      font-weight: bold;
-    }
- }
-
-
-@media screen and (max-width:39em){
-  // .show-mobile {
-  //   display: block;
-  // }
-  .show-tablet {
-    display: none;
-  }
-  .show-desktop{
-    display: none;
-  }
-}
 /* TABLET */
 @media screen and (min-width: 40em) and (max-width: 63.9em) {
-  .show-mobile {
-    display: none;
+  .container{
+    display: flex;
+    flex-direction: row;
   }
-  .show-tablet {
-    display: block;
+  .container2{
+    margin: 20px;
   }
-  .show-desktop{
-    display: none;
+  .message-error{
+    width: 340px;
   }
+  .card {
+    min-width: 295px;
+  }
+  .form {
+    padding: 20px;
+    height: 300px;
+  }
+  .card_header {
+    height: 100px;
+  }
+  .field {
+    padding-bottom: 20px;
+  }
+  button {
+    background-color: rgba(255, 193, 0, 1);
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 10px 15px;
+    font-weight: 500;
+    color: white;
+   }
+
 }
 
-/* DESKTOP */
-@media screen and (min-width: 64em) {
-  .show-mobile {
-    display: none;
-  }
-  .show-tablet {
-    display: none;
-  }
-}
+
+//  /*------------------------------TABLET---------------------------*/
+//  .show-tablet{
+//   display: flex;
+//   flex-direction: row;
+//   background-color: #01957D;
+//   height: 1024px;
+//     .imgContainer{
+//       justify-content: center;
+//       margin-top: 8%;
+//     }
+//     .card{
+//       width: 60%;
+//       margin: 6%;
+//       margin-left: 18%;
+
+//     }
+//     .logoKrusty{
+//       margin-left: 20%;
+//     }
+//     .form_heading{
+//       font-size: 40px;
+//       font-weight: bold;
+//     }
+//     label{
+//       font-size: 30px;
+//     }
+//     .input {
+//       height: 40px;
+//       margin: 3% 0;
+//       font-size: 18px;
+//       font-weight: bold;
+//     }
+//     .card {
+//       height: 35%;
+//     }
+//     .button{
+//       width: 100px;
+//       height: 40px;
+//       font-size: 20px;
+//       font-weight: bold;
+//     }
+//     .message-error{
+//       background: red;
+//       color: white;
+//       text-align: center;
+//     }
+//  }
+
+//  /*------------------------------DESKTOP---------------------------*/
+//  .show-desktop{
+//   display: flex;
+//   padding: 0;
+//   width: 100%;
+
+//   margin: 0;
+//   background-color: #01957D;
+//   align-items: center;
+//   align-content: center;
+//   justify-content: center;
+//   margin-top: 2%;
+//     .imgContainer{
+//       display: flex;
+//       align-items: center;
+//       width: 40%;
+//       margin-top: 10%;
+//       margin-left: 0;
+
+//     }
+//     .form{
+//       min-width: 350px;
+//       max-width: 450px;
+//       margin-left: 25%;
+//     }
+//     .form_heading{
+//       font-size: 40px;
+//       font-weight: bold;
+//     }
+//     label{
+//       font-size: 30px;
+//     }
+//     .input {
+//       height: 40px;
+//       margin: 3% 0;
+//       font-size: 18px;
+//       font-weight: bold;
+//     }
+//     .button{
+//       width: 100px;
+//       height: 40px;
+//       font-size: 20px;
+//       font-weight: bold;
+//     }
+//  }
+
+// /* DESKTOP */
+// @media screen and (min-width: 64em) {
+//   .show-mobile {
+//     display: none;
+//   }
+//   .show-tablet {
+//     display: none;
+//   }
+// }

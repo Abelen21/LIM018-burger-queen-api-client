@@ -22,15 +22,4 @@ export class AppComponent {
     this.token = token;
   }
 
-  createUser() {
-    this.usersService.create(this.token,{
-      name: 'Stefani',
-      email: 'iam@fakel.lol',
-      password: 'apasswordtochange'
-    })
-    .subscribe(rta => {
-      console.log(rta);
-    });
-  }
-
 }

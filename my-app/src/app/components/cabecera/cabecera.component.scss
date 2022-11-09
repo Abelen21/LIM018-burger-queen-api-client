@@ -3,8 +3,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #01957D ;
+  background-color: rgba(198, 136, 113, 1) ;
   align-items: center;
+  height: 80px;
+
   .logoName{
     padding: 1em;
     display: flex;
@@ -24,14 +26,18 @@
     .logo2{
       color: #000;
     }
-    .account{
-      font-family: 'Share', cursive;
-      color:rgba(239, 95, 43, 1);
-      margin-right: .5em;
-      font-size: 14px;
-    }
   }
+
+  .account{
+    font-family: 'Share', cursive;
+    color:rgba(239, 95, 43, 1);
+    margin-right: .5em;
+    font-size: 14px;
+    background-color: white;
+  }
+
 }
+
 
 // .hide-mobile{
 //   background-color: #01957D ;

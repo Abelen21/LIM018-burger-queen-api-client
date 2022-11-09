@@ -1,0 +1,25 @@
+
+.menu--grid{
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+// TABLETS
+@media screen and (min-width: 40em) and (max-width: 63.9em) {
+  .menu--grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:15px;
+  }
+}
+
+// DESKTOP
+@media screen and (min-width: 64em) {
+  .menu--grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:15px;
+  }
+
+}

@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { homeComponent } from './components/Home/home.component';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
-import { ProductComponent } from './components/product/product.component';
+import { ProductComponent } from './components/itemsmenu/product/product.component';
 import { ContadorComponent } from './components/contador/contador.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
 import { LoginComponent } from './components/login/login.component';
@@ -20,6 +20,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { IngresoComponent } from './pages/ingreso/ingreso.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { OrdenesComponent } from './pages/ordenes/ordenes.component';
+import { ItemsmenuComponent } from './components/itemsmenu/itemsmenu.component';
 
 
 // const appRoutes:Routes =[
@@ -40,7 +41,8 @@ import { OrdenesComponent } from './pages/ordenes/ordenes.component';
     NotFoundComponent,
     IngresoComponent,
     PedidosComponent,
-    OrdenesComponent
+    OrdenesComponent,
+    ItemsmenuComponent
   ],
   imports: [
     BrowserModule,
